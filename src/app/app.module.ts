@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
+//Importación del módulo 
+import { HttpClientModule } from  '@angular/common/http';
+
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
 import { NavigationComponent } from './navigation/navigation.component';
+import { DataComponent } from './data/data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent
+    NavigationComponent,
+    DataComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
