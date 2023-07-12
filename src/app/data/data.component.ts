@@ -13,7 +13,7 @@ export class DataComponent {
   }
   ngOnInit(){
     this.dataProvider.getResponse().subscribe((response) => {
-      this.data = (response as Plantillas[]);
+      this.data = (response as Plantillas[]).slice(0,10);
     })
   }
 }
