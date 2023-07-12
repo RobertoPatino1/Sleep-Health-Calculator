@@ -6,5 +6,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ServiciosService {
   private URL: string = 'https://sleep-health-calculator-default-rtdb.firebaseio.com/collection.json';
+
+    //Método con la petición HTTP
+    getResponse() {
+      return this.http.get(this.URL);
+    }
+
   constructor(private http:HttpClient) { }
 }
