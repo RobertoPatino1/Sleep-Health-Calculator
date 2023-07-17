@@ -1,7 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DataComponent } from './data.component';
-
 describe('DataComponent', () => {
   let component: DataComponent;
   let fixture: ComponentFixture<DataComponent>;
@@ -15,7 +13,8 @@ describe('DataComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should contain a specific HTML tag', () => {
+    const element = fixture.nativeElement.querySelector("table#BMI_table")
+    expect(element).toBeTruthy();
   });
 });
