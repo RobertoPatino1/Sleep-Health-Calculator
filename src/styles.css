@@ -6922,7 +6922,7 @@ button.bg-dark:focus {
 }
 
 .bg-white {
-  background-color: #907bd2 !important;
+  background-color: #fff !important;
 }
 
 .bg-transparent {
@@ -10027,7 +10027,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #4e73df !important;
+  color: #907bd2 !important;
 }
 
 a.text-primary:hover,
