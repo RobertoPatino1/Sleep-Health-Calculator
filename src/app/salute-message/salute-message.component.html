@@ -4,19 +4,22 @@
     <i
       class="fa-solid fa-sun fa-xl"
       *ngIf="timeIdentifier == 1"
-      style="color: #c4a9f9"
+      style="color: #a19fa6"
     ></i>
     <i
       class="fa-solid fa-cloud-sun fa-xl"
       *ngIf="timeIdentifier == 2"
-      style="color: #907bd2"
+      style="color: #a19fa6"
     ></i>
     <i
       class="fa-solid fa-cloud-moon fa-xl"
       *ngIf="timeIdentifier == 3"
-      style="color: #8766da"
+      style="color: #a19fa6"
     ></i>
   </h1>
-
-  <!-- <p *ngIf="timeIdentifier == 3">noche</p> -->
+  <div class="mr-3">
+    <h6>{{ formattedDate }}</h6>
+    <h3 *ngIf="hour < 12">{{ hour }}:{{ minutes }} AM</h3>
+    <h3 *ngIf="hour >= 12">{{ hour }}:{{ minutes }} PM</h3>
+  </div>
 </div>
