@@ -1,13 +1,9 @@
-<p>data works!</p>
-  <!-- Tabla con datos -->
-
+<!-- Tabla con datos -->
 <table>
-    <tbody>
-        <tr *ngFor="let datum of data">
-            <th> {{  datum.Age  }}  </th>
-            <td> {{  datum["BMI Category"]  }}  </td>
-        </tr>
-    </tbody>
+  <tbody>
+    <tr *ngFor="let datum of data">
+      <th>{{ datum.Age }}</th>
+      <td>{{ datum["BMI Category"] }}</td>
+    </tr>
+  </tbody>
 </table>
-
-

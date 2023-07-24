@@ -1,0 +1,22 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-900">
+    {{ salute }}
+    <i
+      class="fa-solid fa-sun fa-xl"
+      *ngIf="timeIdentifier == 1"
+      style="color: #c4a9f9"
+    ></i>
+    <i
+      class="fa-solid fa-cloud-sun fa-xl"
+      *ngIf="timeIdentifier == 2"
+      style="color: #907bd2"
+    ></i>
+    <i
+      class="fa-solid fa-cloud-moon fa-xl"
+      *ngIf="timeIdentifier == 3"
+      style="color: #8766da"
+    ></i>
+  </h1>
+
+  <!-- <p *ngIf="timeIdentifier == 3">noche</p> -->
+</div>

@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 
 import { NavigationComponent } from './navigation/navigation.component';
 import { DataComponent } from './data/data.component';
+import { SaluteMessageComponent } from './salute-message/salute-message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    DataComponent
+    DataComponent,
+    SaluteMessageComponent
   ],
   imports: [
     BrowserModule,HttpClientModule
