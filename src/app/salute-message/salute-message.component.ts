@@ -14,19 +14,8 @@ export class SaluteMessageComponent{
 
   ngOnInit(): void {
     this.setup()
-    const currentTime = new Date().getHours();
-    this.hour = new Date().getHours();
-    this.minutes = new Date().getMinutes();
-    if(currentTime>=5 && currentTime<=12){
-      this.salute = "Good Morning Walter!"
-      this.timeIdentifier=1;
-    }else if(currentTime>12 && currentTime<=18){
-      this.salute = "Good Afternoon Walter!"
-      this.timeIdentifier=2
-    }else{
-      this.salute = "Good Evening Walter!"
-      this.timeIdentifier=3
-    }
+    this.updateTime();  //Function that updates the time constantly
+
   }
 
   setup():void{
@@ -48,6 +37,32 @@ export class SaluteMessageComponent{
     const year = currentDate.getFullYear();
 
     this.formattedDate = `${dayOfWeek}, ${month} ${dayOfMonth}, ${year}`;
+  }
+
+  updateTime(): void {
+    setInterval(() => {
+      const currentTime = new Date();
+      this.hour = currentTime.getHours();
+      this.minutes = currentTime.getMinutes();
+      this.updateSalute(); 
+    }, 1000); 
+  }
+
+
+  updateSalute():void{
+    const currentTime = new Date().getHours();
+    this.hour = new Date().getHours();
+    this.minutes = new Date().getMinutes();
+    if(currentTime>=5 && currentTime<=12){
+      this.salute = "Good Morning Walter!"
+      this.timeIdentifier=1;
+    }else if(currentTime>12 && currentTime<=18){
+      this.salute = "Good Afternoon Walter!"
+      this.timeIdentifier=2
+    }else{
+      this.salute = "Good Evening Walter!"
+      this.timeIdentifier=3
+    }
   }
   
 }
