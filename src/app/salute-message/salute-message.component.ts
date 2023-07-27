@@ -9,7 +9,7 @@ export class SaluteMessageComponent{
   salute:string = "";
   timeIdentifier:number = 0
   hour:number = 0;
-  minutes:number = 0;
+  minutes:string = "";
   formattedDate:string = ""
 
   ngOnInit(): void {
@@ -43,7 +43,8 @@ export class SaluteMessageComponent{
     setInterval(() => {
       const currentTime = new Date();
       this.hour = currentTime.getHours();
-      this.minutes = currentTime.getMinutes();
+      let minutes_number:number = currentTime.getMinutes();
+      this.minutes = minutes_number.toString().padStart(2, '0');
       this.updateSalute(); 
     }, 1000); 
   }
@@ -52,7 +53,7 @@ export class SaluteMessageComponent{
   updateSalute():void{
     const currentTime = new Date().getHours();
     this.hour = new Date().getHours();
-    this.minutes = new Date().getMinutes();
+    this.minutes = new Date().getMinutes().toString().padStart(2, '0');
     if(currentTime>=5 && currentTime<=12){
       this.salute = "Good Morning Walter!"
       this.timeIdentifier=1;
