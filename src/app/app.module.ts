@@ -6,10 +6,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-import { NavigationComponent } from './navigation/navigation.component';
+import { NavigationComponent } from '../components/navigation/navigation.component';
 import { DataComponent } from './data/data.component';
-import { SaluteMessageComponent } from './salute-message/salute-message.component';
-import { CardComponent } from './card/card.component';
+import { SaluteMessageComponent } from '../components/salute-message/salute-message.component';
+import { CardComponent } from '../components/card/card.component';
+import { ContainerComponent } from '../components/container/container.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CardComponent } from './card/card.component';
     NavigationComponent,
     DataComponent,
     SaluteMessageComponent,
-    CardComponent
+    CardComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,HttpClientModule
