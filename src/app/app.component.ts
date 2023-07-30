@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) { }
   ngOnInit(): void {
       this.setImage()
+      this.hideSidebar()
   }
 
   setImage():void{
@@ -26,5 +27,21 @@ export class AppComponent implements OnInit {
         console.error('Error al obtener la imagen:', error);
       }
     );
+  }
+
+
+  hideSidebar():void{
+    const sidebar = document.getElementById("accordionSidebar")
+    const button = document.getElementById("sidebarToggleTop")
+
+    if(sidebar!=null && button!=null){
+      button.addEventListener('click',()=>{
+        if(sidebar.style.display=='none'){
+          sidebar.style.display = 'block'
+        }else{
+          sidebar.style.display = 'none'
+        }
+      })
+    }
   }
 }

@@ -11,6 +11,7 @@ import { DataComponent } from './data/data.component';
 import { SaluteMessageComponent } from '../components/salute-message/salute-message.component';
 import { CardComponent } from '../components/card/card.component';
 import { ContainerComponent } from '../components/container/container.component';
+import { TopBarComponent } from '../components/top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContainerComponent } from '../components/container/container.component'
     DataComponent,
     SaluteMessageComponent,
     CardComponent,
-    ContainerComponent
+    ContainerComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule,HttpClientModule
