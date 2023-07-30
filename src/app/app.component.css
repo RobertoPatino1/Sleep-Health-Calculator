@@ -1,0 +1,11 @@
+.sleep-video {
+  display: block;
+  width: 100%;
+  height: 15rem;
+}
+
+@media (max-width: 600px) {
+  .sleep-video {
+    height: fit-content;
+  }
+}

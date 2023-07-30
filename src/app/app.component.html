@@ -421,47 +421,20 @@
           <div class="row">
             <!-- Area Chart -->
             <div class="col-xl-12 col-lg-6">
-              <app-container></app-container>
+              <app-container title="Weekly Sleep Challenges">
+                <app-data></app-data>
+              </app-container>
             </div>
 
             <div class="col-xl-4 col-lg-6">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div
-                  class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
-                >
-                  <h6 class="m-0 font-weight-bold text-primary">
-                    Quotes of the day
-                  </h6>
-                  <div class="dropdown no-arrow">
-                    <a
-                      class="dropdown-toggle"
-                      href="#"
-                      role="button"
-                      id="dropdownMenuLink"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <i
-                        class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"
-                      ></i>
-                    </a>
-                    <div
-                      class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                      aria-labelledby="dropdownMenuLink"
-                    >
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body"></div>
-              </div>
+              <app-container title="Quote of the day">
+                <div id="quote-image-area"></div>
+                <img
+                  class="img-fluid"
+                  src="https://zenquotes.io/api/image"
+                  alt="Imagen de la API"
+                />
+              </app-container>
             </div>
           </div>
 
@@ -469,33 +442,30 @@
           <div class="row">
             <!-- Content Column -->
             <div class="col-lg-6 mb-4">
-              <!-- Project Card Example -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">
-                    Your current sleep state
-                  </h6>
-                </div>
-                <div class="card-body">
-                  <!--TODO: FILL THIS -->
-                </div>
-              </div>
+              <app-container title="Your current sleep state">
+                <div class="chart-area"></div>
+              </app-container>
             </div>
 
             <div class="col-lg-6 mb-4">
-              <!-- Illustrations -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">
-                    Today's video: "A healthy sleep"
-                  </h6>
-                </div>
-                <div class="card-body"></div>
-              </div>
+              <app-container
+                title="Today's video: 'How To Fix Your Sleep Schedule'"
+              >
+                <!-- VIDEO  -->
+                <iframe
+                  class="sleep-video"
+                  width="640"
+                  height="630"
+                  src="https://www.youtube.com/embed/P_i6yqWjASk"
+                  title="How To Fix Your Sleep Schedule (PROVEN Step-By-Step Guide)"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </app-container>
             </div>
           </div>
         </div>
-        <!-- /.container-fluid -->
       </div>
       <!-- End of Main Content -->
 
