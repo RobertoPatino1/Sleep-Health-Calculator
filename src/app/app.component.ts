@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import {Chart} from 'chart.js';
+// Chart.register(...registerables);
+
 
 
 @Component({
@@ -46,72 +48,37 @@ export class AppComponent implements OnInit {
   }
 
   plotLineChart(): void {
-    
-    const DATA_COUNT = 7;
-    const MONTHS = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December'
-    ];
-    const labels = MONTHS.slice(0, 7);
-    const data = {
-      labels: labels,
-      datasets: [
-        {
-          label: 'Unfilled',
-          fill: false,
-          backgroundColor: 'rgb(54, 162, 235)',
-          borderColor: 'rgb(54, 162, 235)'
-          // data: Utils.numbers(NUMBER_CFG),
-        }, {
-          label: 'Dashed',
-          fill: false,
-          backgroundColor: 'rgb(75, 192, 192)',
-          borderColor: 'rgb(75, 192, 192)',
-          borderDash: [5, 5]
-          // data: Utils.numbers(NUMBER_CFG),
-        }, {
-          label: 'Filled',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderColor: 'rgb(255, 99, 132)',
-          // data: Utils.numbers(NUMBER_CFG),
-          fill: true,
-        }
-      ]
-    };
-    const config = {
-      type: 'line',
-      data: data,
-      options: {
-        responsive: true,
-        plugins: {
-          title: {
-            display: true,
-            text: 'Chart.js Line Chart'
-          },
-        },
-        interaction: {
-          mode: 'index',
-          intersect: false
-        },
-
+    var myChart = new Chart("main-chart-area", {
+      type: 'bar',
+      data: {
+          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          datasets: [{
+              label: '# of Votes',
+              data: [12, 19, 3, 5, 2, 3],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 1
+          }]
       },
-    };
-    const ctx = document.getElementById("main-chart-area") as HTMLCanvasElement | null;
+      options: {
+          scales: {
 
-    if (ctx !== null) {
-      const chart = new Chart(ctx, config);
-    } else {
-      console.error("Canvas element not found!");
-    }
+          }
+      }
+  });
   }
 }
