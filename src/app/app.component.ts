@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) { }
   ngOnInit(): void {
       this.setImage()
-      this.hideSidebar()
+      this.handleChallengesList()
   }
 
   setImage():void{
@@ -30,18 +30,19 @@ export class AppComponent implements OnInit {
   }
 
 
-  hideSidebar():void{
-    const sidebar = document.getElementById("accordionSidebar")
-    const button = document.getElementById("sidebarToggleTop")
-
-    if(sidebar!=null && button!=null){
-      button.addEventListener('click',()=>{
-        if(sidebar.style.display=='none'){
-          sidebar.style.display = 'block'
-        }else{
-          sidebar.style.display = 'none'
-        }
-      })
+  handleChallengesList():void{
+    // Add a "checked" symbol when clicking on a list item
+    let list = document.querySelector('#challengesUL');
+    
+    if(list!=null){
+      list.addEventListener('click', function(ev) {
+        if(ev.target!=null)
+          (ev.target as HTMLElement).classList.toggle('checked');
+      },false);
     }
+
+
+
+
   }
 }

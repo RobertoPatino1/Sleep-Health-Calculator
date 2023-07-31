@@ -1,3 +1,6 @@
+.salute {
+  font-weight: 450;
+}
 @media (max-width: 600px) {
   .saluteIcon {
     display: none;
