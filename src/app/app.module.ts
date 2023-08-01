@@ -12,6 +12,8 @@ import { SaluteMessageComponent } from '../components/salute-message/salute-mess
 import { CardComponent } from '../components/card/card.component';
 import { ContainerComponent } from '../components/container/container.component';
 import { TopBarComponent } from '../components/top-bar/top-bar.component';
+import { ChartComponentComponent } from '../components/chart-component/chart-component.component';
+import { DashboardComponent } from 'src/components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { TopBarComponent } from '../components/top-bar/top-bar.component';
     SaluteMessageComponent,
     CardComponent,
     ContainerComponent,
-    TopBarComponent
+    TopBarComponent,
+    ChartComponentComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,HttpClientModule

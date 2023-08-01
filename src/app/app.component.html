@@ -23,7 +23,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-      <a class="nav-link" href="index.html">
+      <a class="nav-link" href="#dashboard">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a
       >
@@ -37,7 +37,7 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-      <a class="nav-link" href="tables.html">
+      <a class="nav-link" href="#sleep-calculator">
         <i class="fas fa-fw fa-calculator"></i>
         <span>Sleep quality calculator</span></a
       >
@@ -45,7 +45,7 @@
 
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-      <a class="nav-link" href="tables.html">
+      <a class="nav-link" href="#your-charts">
         <i class="fas fa-fw fa-chart-area"></i>
         <span>Your charts</span></a
       >
@@ -59,7 +59,7 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-      <a class="nav-link" href="tables.html">
+      <a class="nav-link" href="#global-data">
         <i class="fas fa-fw fa-globe"></i>
         <span>Global data</span></a
       >
@@ -67,7 +67,7 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-      <a class="nav-link" href="charts.html">
+      <a class="nav-link" href="#advices">
         <i class="fas fa-fw fa-message"></i>
         <span>Advices</span></a
       >
@@ -75,7 +75,7 @@
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-      <a class="nav-link" href="tables.html">
+      <a class="nav-link" href="#forums">
         <i class="fas fa-fw fa-comments"></i>
         <span>Forums</span></a
       >
@@ -94,103 +94,37 @@
       <app-top-bar></app-top-bar>
       <!-- End Top-Bar  -->
       <!-- Begin Page Content -->
-      <div class="container-fluid">
-        <!-- Page Heading -->
-        <app-salute-message></app-salute-message>
-        <!-- Content Row -->
-        <div class="row">
-          <!-- Component 1 -->
-          <div class="col-xl-3 col-md-6 mb-4">
-            <app-card
-              title="Hours of sleep (Weekly)"
-              value="56 hours"
-              iconClass="fa-solid fa-bed fa-2xl"
-            ></app-card>
-          </div>
-          <!-- Component 2 -->
-          <div class="col-xl-3 col-md-6 mb-4">
-            <app-card
-              title="Hours of physical activity (Daily)"
-              value="3 hours"
-              iconClass="fas fa-running fa-2xl"
-            ></app-card>
-          </div>
-          <!-- Component 3 -->
-          <div class="col-xl-3 col-md-6 mb-4">
-            <app-card
-              title="Miligrams of caffeine consumed (Weekly)"
-              value="2100 mg"
-              iconClass="fas fa-coffee fa-2xl"
-            ></app-card>
-          </div>
-          <!-- Component 4 -->
-          <div class="col-xl-3 col-md-6 mb-4">
-            <app-card
-              title="Daily screen Time (hours)"
-              value="4:23 hours"
-              iconClass="fas fa-mobile-alt fa-2xl"
-              borderColor="success"
-              class="purple-card"
-            ></app-card>
-          </div>
 
-          <!-- Content Row -->
-          <div class="row">
-            <!-- Area Chart -->
-            <div class="col-xl-6 col-lg-6">
-              <app-container title="Weekly Sleep Challenges">
-                <!-- <app-data></app-data> -->
-                <ul class="list-group" id="challengesUL">
-                  <li>Stick to a consistent bedtime for better sleep.</li>
-                  <li>Avoid screens before bedtime for improved rest.</li>
-                  <li>Limit caffeine intake for better sleep.</li>
-                  <li>Unwind with a bedtime relaxation routine.</li>
-                  <li>Skip the snooze button for a refreshed morning.</li>
-                </ul>
-              </app-container>
-            </div>
+      <!-- Dashboard Section -->
+      <section id="dashboard"><app-dashboard></app-dashboard></section>
 
-            <div class="col-xl-6 col-lg-6">
-              <app-container title="Quote of the day">
-                <div id="quote-image-area"></div>
-                <img
-                  class="img-fluid"
-                  src="https://zenquotes.io/api/image"
-                  alt="Imagen de la API"
-                />
-              </app-container>
-            </div>
-          </div>
+      <!-- Calculator Section -->
+      <section id="sleep-calculator">
+        <h3 class="text-center text-dark responsive">
+          Sleep Quality Calculator
+        </h3>
+      </section>
 
-          <!-- Content Row -->
-          <div class="row">
-            <!-- Content Column -->
-            <div class="col-lg-6 mb-4">
-              <app-container title="Your current sleep state">
-                <canvas id="main-chart-area"></canvas>
-              </app-container>
-            </div>
+      <!-- Charts Section -->
+      <section id="your-charts">
+        <h3 class="text-center text-dark responsive">Your Charts</h3>
+      </section>
 
-            <div class="col-lg-6 mb-4">
-              <app-container
-                title="Today's video: 'How To Fix Your Sleep Schedule'"
-              >
-                <div class="embed-responsive embed-responsive-4by3">
-                  <iframe
-                    class="sleep-video embed-responsive-item"
-                    src="https://www.youtube.com/embed/P_i6yqWjASk"
-                    title="How To Fix Your Sleep Schedule (PROVEN Step-By-Step Guide)"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <!-- VIDEO  -->
-              </app-container>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- Global Data Section -->
+      <section id="global-data">
+        <h3 class="text-center text-dark responsive">Global Data</h3>
+      </section>
+
+      <!-- Global Data Section -->
+      <section id="advices">
+        <h3 class="text-center text-dark responsive">Advices</h3>
+      </section>
+
+      <!-- Global Data Section -->
+      <section id="forums">
+        <h3 class="text-center text-dark responsive">Forums</h3>
+      </section>
+
       <!-- End of Main Content -->
 
       <!-- Footer -->
