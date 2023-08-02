@@ -14,6 +14,9 @@ import { ContainerComponent } from '../components/container/container.component'
 import { TopBarComponent } from '../components/top-bar/top-bar.component';
 import { ChartComponentComponent } from '../components/chart-component/chart-component.component';
 import { DashboardComponent } from 'src/components/dashboard/dashboard.component';
+import { GraphsComponent } from '../components/graphs/graphs.component';
+ 
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
 @NgModule({
   declarations: [
@@ -25,10 +28,11 @@ import { DashboardComponent } from 'src/components/dashboard/dashboard.component
     ContainerComponent,
     TopBarComponent,
     ChartComponentComponent,
-    DashboardComponent
+    DashboardComponent,
+    GraphsComponent
   ],
   imports: [
-    BrowserModule,HttpClientModule
+    BrowserModule,HttpClientModule, CanvasJSAngularChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

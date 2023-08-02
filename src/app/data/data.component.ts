@@ -8,12 +8,15 @@ import { ServiciosService } from '../providers/servicios.service';
 })
 export class DataComponent {
   public data:Plantillas[] = [];
+
   constructor(private dataProvider:ServiciosService){
 
   }
   ngOnInit(){
     this.dataProvider.getResponse().subscribe((response) => {
       this.data = (response as Plantillas[]).slice(0,10);
+
     })
+
   }
 }
