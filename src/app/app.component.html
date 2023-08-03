@@ -100,9 +100,88 @@
 
       <!-- Calculator Section -->
       <section id="sleep-calculator">
-        <h3 class="text-center text-dark responsive">
-          Sleep Quality Calculator
-        </h3>
+
+        <div class="card shadow mb-4">
+          <!-- Card Header - Dropdown -->
+          <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">{{ title }}</h6>
+          </div>
+          <!-- Card Body -->
+          <div class="card-body">
+            <!-- Formulario  -->
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-6 col-12 mt-5">
+                  <form id="formulario">
+
+                      <div class="row mb-4 d-flex justify-content-center">
+                          
+                          <!-- Genero -->
+                          <div class="col-md-6">
+                            <div class="form-outline mb-4">
+                                <input type="string" id="valorPorHora"
+                                    step="0.25" required="required"
+                                    class="form-control" />
+                                <label class="form-label" for="valorPorHora">Genero (H/M)</label>
+                            </div>
+                          </div>
+
+                          <!-- Edad -->
+                          <div class="col-md-6">
+                            <div class="form-outline mb-4">
+                                <input type="number" id="valorPorHora"
+                                    step="0.25" required="required"
+                                    class="form-control" />
+                                <label class="form-label" for="valorPorHora">Edad</label>
+                            </div>
+                          </div>
+
+                           <!-- Horas de sueno -->
+                           <div class="col-md-6">
+                            <div class="form-outline mb-4">
+                                <input type="number" id="interfazHoras"
+                                    class="form-control" />
+                                <label class="form-label" for="interfazHoras">Horas de sueño</label>
+                            </div>
+                          </div>
+
+                      </div>
+
+                      <!--<div class="row mb-4 d-flex justify-content-center">
+
+                           Horas de sueno 
+                          <div class="col-md-6">
+                            <div class="form-outline mb-4">
+                                <input type="number" id="interfazHoras"
+                                    class="form-control" />
+                                <label class="form-label" for="interfazHoras">Horas de sueño</label>
+                            </div>
+                          </div>
+                      </div>-->
+                      <!-- Submit button -->
+                      <div class="row mb-4 d-flex justify-content-center">
+                        <div class="col-md-6">
+                            <button type="submit"
+                                class="btn btn-primary btn-block">Calcular ciclos de sueño</button>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4 d-flex justify-content-center">
+                        <div class="col-md-6">
+                            <input
+                                class="form-control"
+                                id="valorTotal"
+                                type="text"
+                                placeholder="Ciclos"
+                                aria-label="disabled input example"
+                                disabled />
+                        </div>
+                    </div>
+
+                  </form>
+              </div>
+          </div>
+          </div>
+        </div>
       </section>
 
       <!-- Charts Section -->
