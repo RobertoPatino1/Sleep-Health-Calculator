@@ -5,6 +5,7 @@ import { HttpClientModule } from  '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 import { NavigationComponent } from '../components/navigation/navigation.component';
 import { DataComponent } from './data/data.component';
@@ -37,7 +38,7 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
     CalculadoraComponent
   ],
   imports: [
-    BrowserModule,HttpClientModule, CanvasJSAngularChartsModule
+    BrowserModule,HttpClientModule, CanvasJSAngularChartsModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

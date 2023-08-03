@@ -10,7 +10,7 @@
         <!-- Formulario  -->
         <div class="row d-flex justify-content-center">
           <div class="col-md-6 col-12 mt-5">
-              <form id="formulario">
+              <form id="formulario" (ngSubmit)="saveData(formTemplate)" #formTemplate="ngForm">
 
                   <div class="row mb-4 d-flex justify-content-center">
                       
@@ -18,8 +18,7 @@
                       <div class="col-md-6">
                         <div class="form-outline mb-4">
                             <input type="string" id="genero"
-                                step="0.25" required="required"
-                                class="form-control" />
+                                step="0.25" class="form-control" name="genero" [(ngModel)]="usuario.genero" />
                             <label class="form-label" for="valorPorHora">Genero (H/M)</label>
                         </div>
                       </div>
@@ -28,8 +27,7 @@
                       <div class="col-md-6">
                         <div class="form-outline mb-4">
                             <input type="number" id="edad"
-                                step="0.25" required="required"
-                                class="form-control" />
+                                step="0.25" class="form-control" name="edad" [(ngModel)]="usuario.edad" />
                             <label class="form-label" for="valorPorHora">Edad</label>
                         </div>
                       </div>
@@ -38,7 +36,7 @@
                        <div class="col-md-6">
                         <div class="form-outline mb-4">
                             <input type="number" id="horasDeSueno"
-                                class="form-control" />
+                                required class="form-control" name="horas" [(ngModel)]="usuario.horas"/>
                             <label class="form-label" for="interfazHoras">Horas de sueño</label>
                         </div>
                       </div>
