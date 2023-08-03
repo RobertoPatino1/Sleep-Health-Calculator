@@ -15,8 +15,11 @@ import { TopBarComponent } from '../components/top-bar/top-bar.component';
 import { ChartComponentComponent } from '../components/chart-component/chart-component.component';
 import { DashboardComponent } from 'src/components/dashboard/dashboard.component';
 import { GraphsComponent } from '../components/graphs/graphs.component';
+import { CalculadoraComponent } from '../components/calculadora/calculadora.component';
+
  
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
     TopBarComponent,
     ChartComponentComponent,
     DashboardComponent,
-    GraphsComponent
+    GraphsComponent,
+    CalculadoraComponent,
+    CalculadoraComponent
   ],
   imports: [
     BrowserModule,HttpClientModule, CanvasJSAngularChartsModule
