@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
+import {funcionPredeterminada} from '../calculadora/calculadora.js'
 @Component({
   selector: 'app-calculadora',
   templateUrl: './calculadora.component.html',
@@ -15,6 +15,7 @@ export class CalculadoraComponent {
   }
   constructor(){}
   ngOnInit(): void{
+    funcionPredeterminada();
   }
 
   saveData(form:NgForm){

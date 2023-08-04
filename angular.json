@@ -93,7 +93,10 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/components/calculadora/calculadora.js",
+              "src/components/graphs/graphs.js"
+            ]
           }
         }
       }

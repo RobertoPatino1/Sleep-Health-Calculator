@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./graphs.component.css']
 })
 export class GraphsComponent {
-
+	
 	chartOptions = {
 		title: {
 		  text: "Basic Column Chart in Angular"

@@ -1,18 +1,15 @@
-let funcionPredeterminada = () =>{
+exports.funcionPredeterminada = function () {
+  const formulario = document.getElementById("formulario");
 
-    const formulario = document.getElementById('formulario')
+  formulario.addEventListener("submit", (evento) => {
+    evento.preventDefault();
 
-    formulario.addEventListener('submit',(evento)=>{
+    let horasDeSueno = document.getElementById("horasDeSueno").value;
 
-        evento.preventDefault();
+    let resultado = (parseFloat(horasDeSueno) * 60) / 90;
 
-        let horasDeSueno= document.getElementById('horasDeSueno').value;
+    document.getElementById("ciclos").value = parseInt(resultado);
+  });
+};
 
-        let resultado= (parseFloat(horasDeSueno)*60)/90;
-
-        document.getElementById("ciclos").value = parseInt(resultado);
-
-    })
-}
-
-funcionPredeterminada();
+// funcionPredeterminada();
