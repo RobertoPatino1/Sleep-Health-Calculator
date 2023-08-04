@@ -2,3 +2,24 @@
   background-color: #7955d4;
   color: white;
 }
+
+ul {
+  list-style-type: none;
+}
+
+li:hover {
+  cursor: pointer;
+}
+table,
+th,
+td {
+  text-align: center;
+}
+th {
+  background-color: #7955d4;
+  font-size: 0.85rem;
+  color: white;
+}
+td {
+  width: 17%;
+}
