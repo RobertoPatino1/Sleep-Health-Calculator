@@ -19,7 +19,7 @@
                         <div class="form-outline mb-4">
                             <input type="string" id="genero"
                                 step="0.25" class="form-control" name="genero" [(ngModel)]="usuario.genero" />
-                            <label class="form-label" for="valorPorHora">Genero (H/M)</label>
+                            <label class="form-label" for="genero">Gender (M/F)</label>
                         </div>
                       </div>
 
@@ -28,7 +28,7 @@
                         <div class="form-outline mb-4">
                             <input type="number" id="edad"
                                 step="0.25" class="form-control" name="edad" [(ngModel)]="usuario.edad" />
-                            <label class="form-label" for="valorPorHora">Edad</label>
+                            <label class="form-label" for="edad">Age</label>
                         </div>
                       </div>
 
@@ -37,7 +37,7 @@
                         <div class="form-outline mb-4">
                             <input type="number" id="horasDeSueno"
                                 required class="form-control" name="horas" [(ngModel)]="usuario.horas"/>
-                            <label class="form-label" for="interfazHoras">Horas de sueño</label>
+                            <label class="form-label" for="horas">Sleep Hours</label>
                         </div>
                       </div>
 
@@ -58,7 +58,7 @@
                   <div class="row mb-4 d-flex justify-content-center">
                     <div class="col-md-6">
                         <button type="submit"
-                            class="btn btn-primary btn-block">Calcular ciclos de sueño</button>
+                            class="btn btn-primary btn-block">Calculate Sleep Cycles</button>
                     </div>
                 </div>
 
@@ -68,7 +68,7 @@
                             class="form-control"
                             id="ciclos"
                             type="text"
-                            placeholder="Ciclos"
+                            placeholder="Total Cycles"
                             aria-label="disabled input example"
                             disabled />
                     </div>
