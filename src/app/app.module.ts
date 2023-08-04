@@ -13,7 +13,6 @@ import { SaluteMessageComponent } from '../components/salute-message/salute-mess
 import { CardComponent } from '../components/card/card.component';
 import { ContainerComponent } from '../components/container/container.component';
 import { TopBarComponent } from '../components/top-bar/top-bar.component';
-import { ChartComponentComponent } from '../components/chart-component/chart-component.component';
 import { DashboardComponent } from 'src/components/dashboard/dashboard.component';
 import { GraphsComponent } from '../components/graphs/graphs.component';
 import { CalculadoraComponent } from '../components/calculadora/calculadora.component';
@@ -31,7 +30,6 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
     CardComponent,
     ContainerComponent,
     TopBarComponent,
-    ChartComponentComponent,
     DashboardComponent,
     GraphsComponent,
     CalculadoraComponent,
