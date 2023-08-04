@@ -29,7 +29,6 @@ export class AppComponent implements OnInit {
     this.getDataFromService()
     this.getALLDataFromService()
     this.plotBarsChart()
-this.plotRadarChart()
 this.plotLinesChart() 
 this.plotScatterChart()
 
@@ -105,7 +104,7 @@ this.plotScatterChart()
         this.chartData = (data as Plantillas[]).slice(0,20); // Cast the data to the Plantillas[] type
       
         this.plotBarsChart();
-        this.plotRadarChart();
+
         this.plotLinesChart();
       },
       (error) => {
@@ -144,62 +143,15 @@ this.plotScatterChart()
         datasets: [{
           label: 'Stress Level', // Cambiar la etiqueta según la propiedad que estés representando
           data: data,
-          backgroundColor: 'rgba(255, 255, 0, 0.2)',
-          borderColor: 'rgba(255, 99, 132, 1)',
+          backgroundColor: 'rgba(250,254,241) ',
+          borderColor: 'rgba(196,192,203)',
           borderWidth: 1
         }]
       },
 
     });
   }
-plotRadarChart(): void {
-  const labels = this.chartData.map((item) => item['Person ID']);
 
-  const datasets = [
-    {
-      label: 'Heart Rate',
-      data: this.chartData.map((item) => parseInt(item['Heart Rate'], 10)),
-      fill: true,
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-      borderColor: 'rgb(255, 99, 132)',
-      pointBackgroundColor: 'rgb(255, 99, 132)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgb(255, 99, 132)'
-    },
-    {
-      label: 'Physical Activity Level',
-      data: this.chartData.map((item) => parseInt(item['Physical Activity Level'], 10)),
-      fill: true,
-      backgroundColor: 'rgba(54, 162, 235, 0.2)',
-      borderColor: 'rgb(54, 162, 235)',
-      pointBackgroundColor: 'rgb(54, 162, 235)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgb(54, 162, 235)'
-    }
-  ];
-
-  const data = {
-    labels: labels,
-    datasets: datasets,
-  };
-
-  const config = {
-    type: 'radar',
-    data: data,
-    options: {
-      elements: {
-        line: {
-          borderWidth: 3
-        }
-      }
-    },
-  };
-
-  // Crear el gráfico
-  var myChart = new Chart('main-chart-radar', config);
-}
 plotLinesChart(): void {
   // Verificar que haya datos para el gráfico
   if (this.chartData.length === 0) {
@@ -219,8 +171,8 @@ plotLinesChart(): void {
       datasets: [{
         label:'Quality of Sleep', // Cambiar la etiqueta según la propiedad que estés representando
         data: data,
-        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        borderColor: 'rgba(255, 99, 132, 1)',
+        backgroundColor: 'rgba(241,250,254)',
+        borderColor: 'rgba(196,192,203)',
         borderWidth: 1
       }]
     },
