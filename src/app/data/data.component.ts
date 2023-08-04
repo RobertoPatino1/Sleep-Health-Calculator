@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Plantillas } from '../interfaces/plantillas';
 import { ServiciosService } from '../providers/servicios.service';
 @Component({
@@ -8,7 +8,7 @@ import { ServiciosService } from '../providers/servicios.service';
 })
 export class DataComponent {
   public data:Plantillas[] = [];
-  category:string = "";
+  @Input() category:string = "";
   constructor(private dataProvider:ServiciosService){
 
   }
@@ -18,5 +18,13 @@ export class DataComponent {
 
     })
 
+  }
+
+
+  validateCategory():void{
+    /*
+    This function will query the dataset according to the category
+    passed in as a parameter to the data tag
+    */
   }
 }
