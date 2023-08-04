@@ -90,42 +90,44 @@
           <!-- VIDEO  -->
         </app-container>
       </div>
-
-      </div>
-
+    </div>
+    <!-- Charts Section -->
+    <section id="charts">
+      <h3 class="text-center text-dark responsive">Global Charts</h3>
       <div class="row">
         <!-- Content Column -->
         <div class="col-lg-12 mb-4">
-          <app-container title=" Calidad de Sueño Actual en Personas">
+          <app-container title="Global sleep quality">
             <canvas id="main-chart-line"></canvas>
           </app-container>
         </div>
-  
 
-      <div class="row">
-        <!-- Content Column -->
-        <div class="col-lg-12 mb-4">
-          <app-container title="Niveles de Estrés Acuales en Personas">
-            <canvas id="main-chart-bars"></canvas>
-          </app-container>
+        <div class="row">
+          <!-- Content Column -->
+          <div class="col-lg-12 mb-4">
+            <app-container title="Global Stress Levels">
+              <canvas id="main-chart-bars"></canvas>
+            </app-container>
+          </div>
         </div>
-  
+
+        <div class="row">
+          <!-- Content Column -->
+          <div class="col-lg-6 mb-4">
+            <app-container title="Global Heart Rate and Physical Activity">
+              <canvas id="main-chart-radar"></canvas>
+            </app-container>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <app-container
+              title="Sleep Duration According to the Number of Daily Steps"
+            >
+              <canvas id="main-chart-scatter"></canvas>
+            </app-container>
+          </div>
+        </div>
       </div>
-
-      <div class="row">
-        <!-- Content Column -->
-        <div class="col-lg-6 mb-4">
-          <app-container title="Frecuencia cardiaca y Actividad Fisica en Personas">
-            <canvas id="main-chart-radar"></canvas>
-          </app-container>
-        </div>
-  
-        <div class="col-lg-6 mb-4">
-          <app-container title="Duracion de Sueño de Acuerdo a la Cantidad de Pasos Diarios">
-            <canvas id="main-chart-scatter"></canvas>
-          </app-container>
-        </div>
-      </div>
-
+    </section>
   </div>
 </div>

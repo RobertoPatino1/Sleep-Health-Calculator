@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./chart-component.component.css']
 })
 export class ChartComponentComponent {
-
+  chart_type:string = "";
+  dataset:{}={} //Optional dataset to use in the graph
 }

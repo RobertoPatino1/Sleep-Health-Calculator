@@ -16,7 +16,7 @@ import { ServiciosService } from '../app/providers/servicios.service';
 export class AppComponent implements OnInit {
   title = 'Sleep-calculator';
   imagenUrl: string = "";
-  imagenData: Blob | undefined;
+  imageData: Blob | undefined;
 
   public chartData: Plantillas[] = [];
 
@@ -41,7 +41,7 @@ this.plotScatterChart()
     const url = "https://zenquotes.io/api/image";
     this.http.get(url, { responseType: 'blob' }).subscribe(
       (data: Blob) => {
-        this.imagenData = data;
+        this.imageData = data;
         this.imagenUrl = URL.createObjectURL(data);
       },
       (error) => {
