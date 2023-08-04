@@ -8,7 +8,7 @@ import { ServiciosService } from '../providers/servicios.service';
 })
 export class DataComponent {
   public data:Plantillas[] = [];
-
+  category:string = "";
   constructor(private dataProvider:ServiciosService){
 
   }

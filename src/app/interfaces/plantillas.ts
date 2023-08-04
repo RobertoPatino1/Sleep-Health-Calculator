@@ -1,11 +1,11 @@
 export interface Plantillas {
-    Age: string
+    "Age": string
     "BMI Category": string
     "Blood Pressure": string
     "Daily Steps": string
-    Gender: string
+    "Gender": string
     "Heart Rate": string
-    Occupation: string
+    "Occupation": string
     "Person ID": string
     "Physical Activity Level": string
     "Quality of Sleep": string

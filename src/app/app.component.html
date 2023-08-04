@@ -73,14 +73,6 @@
       >
     </li>
 
-    <!-- Nav Item - Tables -->
-    <li class="nav-item">
-      <a class="nav-link" href="#forums">
-        <i class="fas fa-fw fa-comments"></i>
-        <span>Forums</span></a
-      >
-    </li>
-
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block" />
   </ul>
@@ -99,21 +91,19 @@
       <section id="dashboard"><app-dashboard></app-dashboard></section>
 
       <!-- Calculator Section -->
-      <app-calculadora></app-calculadora>
 
-      <!-- Global Data Section -->
-      <section id="global-data">
-        <h3 class="text-center text-dark responsive">Global Data</h3>
+      <section id="sleep-calculator" class="container-fluid">
+        <app-calculadora></app-calculadora>
       </section>
 
       <!-- Global Data Section -->
+      <section id="global-data" class="container-fluid">
+        <app-global-data></app-global-data>
+      </section>
+
+      <!-- Advices Section -->
       <section id="advices">
         <h3 class="text-center text-dark responsive">Advices</h3>
-      </section>
-
-      <!-- Global Data Section -->
-      <section id="forums">
-        <h3 class="text-center text-dark responsive">Forums</h3>
       </section>
 
       <!-- End of Main Content -->

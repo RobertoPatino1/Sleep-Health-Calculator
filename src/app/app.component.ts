@@ -26,7 +26,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.setImage()
     this.handleChallengesList()
-    // this.plotLineChart()
     this.getDataFromService()
     this.getALLDataFromService()
     this.plotBarsChart()

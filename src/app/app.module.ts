@@ -19,6 +19,7 @@ import { CalculadoraComponent } from '../components/calculadora/calculadora.comp
 
  
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { GlobalDataComponent } from '../components/global-data/global-data.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
     DashboardComponent,
     GraphsComponent,
     CalculadoraComponent,
-    CalculadoraComponent
+    CalculadoraComponent,
+    GlobalDataComponent
   ],
   imports: [
     BrowserModule,HttpClientModule, CanvasJSAngularChartsModule, FormsModule
