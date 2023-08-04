@@ -13,11 +13,15 @@
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <ul class="list-unstyled" *ngFor="let key of uniqueKeys">
-      <li class="dropdown-item">{{ key }}</li>
+      <li class="dropdown-item" (click)="sectionBySelectedCategory(key)">
+        {{ key }}
+      </li>
     </ul>
   </div>
 </div>
-<table class="table table-striped table-hover mt-3">
+<table
+  class="table table-striped table-hover rounded rounded-5 overflow-hidden mt-3"
+>
   <tbody>
     <tr>
       <th>ID</th>
@@ -28,12 +32,15 @@
       <th>Heart rate</th>
     </tr>
     <tr *ngFor="let datum of data">
-      <td>{{ datum["Person ID"] }}</td>
-      <td>{{ datum.Age }}</td>
-      <td>{{ datum["Sleep Duration"] }}</td>
-      <td>{{ datum["Quality of Sleep"] }}</td>
-      <td>{{ datum["Blood Pressure"] }}</td>
-      <td>{{ datum["Heart Rate"] }}</td>
+      <div *ngIf="datum[category] == key">
+        <td>{{ datum["Gender"] }}</td>
+        <td>{{ datum["Person ID"] }}</td>
+        <td>{{ datum.Age }}</td>
+        <td>{{ datum["Sleep Duration"] }}</td>
+        <td>{{ datum["Quality of Sleep"] }}</td>
+        <td>{{ datum["Blood Pressure"] }}</td>
+        <td>{{ datum["Heart Rate"] }}</td>
+      </div>
     </tr>
   </tbody>
 </table>

@@ -9,7 +9,7 @@ import { ServiciosService } from '../providers/servicios.service';
 export class DataComponent {
   public data:Plantillas[] = [];
   public uniqueKeys:string[] = []
-
+  public key:string=""
 
   @Input() category:string = "";
   constructor(private dataProvider:ServiciosService){}
@@ -17,20 +17,15 @@ export class DataComponent {
   ngOnInit(){
     
     this.dataProvider.getResponse().subscribe((response) => {
-      this.data = (response as Plantillas[]).slice(0,10);
+      this.data = (response as Plantillas[]);
     })
-    this.getUniqueKeys() 
-    console.log("--->");
-       
-    console.log(this.data);
-    console.log(this.category);
-    
+    this.getUniqueKeys()  
     
   }
 
   getUniqueKeys():void{    
     if(this.category!=null){
-      if(this.category==="gender"){
+      if(this.category==="Gender"){
         //Fill the button with Male/Female options
         this.uniqueKeys.push("Male");
         this.uniqueKeys.push("Female");
@@ -49,16 +44,8 @@ export class DataComponent {
   }
 
 
-  validateCategory():void{
-    /*
-    This function will query the dataset according to the category
-    passed in as a parameter to the data tag
-    */
-    if(this.category!=null){
-
-
-
-
-    }
+  sectionBySelectedCategory(key:string):void{
+    console.log("You selected: "+key);
+    this.key = key;
   }
 }

@@ -11,6 +11,10 @@ export class ServiciosService {
     getResponse() {
       return this.http.get(this.URL);
     }
+    
+    getCustomResponse(query:string){
+      return this.http.get(this.URL+"/"+query)
+    }
 
   constructor(private http:HttpClient) { }
 }
