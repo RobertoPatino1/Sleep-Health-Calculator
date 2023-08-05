@@ -13,7 +13,8 @@ export class ServiciosService {
     }
     
     getCustomResponse(query:string){
-      return this.http.get(this.URL+"/"+query)
+      const CORS = "https://cors-anywhere.herokuapp.com/"
+      return this.http.get(CORS+this.URL+"?"+query)
     }
 
   constructor(private http:HttpClient) { }

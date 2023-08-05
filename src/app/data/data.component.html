@@ -31,16 +31,13 @@
       <th>Blood pressure</th>
       <th>Heart rate</th>
     </tr>
-    <tr *ngFor="let datum of data">
-      <div *ngIf="datum[category] == key">
-        <td>{{ datum["Gender"] }}</td>
-        <td>{{ datum["Person ID"] }}</td>
-        <td>{{ datum.Age }}</td>
-        <td>{{ datum["Sleep Duration"] }}</td>
-        <td>{{ datum["Quality of Sleep"] }}</td>
-        <td>{{ datum["Blood Pressure"] }}</td>
-        <td>{{ datum["Heart Rate"] }}</td>
-      </div>
+    <tr *ngFor="let datum of sectionedData">
+      <td>{{ datum["Person ID"] }}</td>
+      <td>{{ datum.Age }}</td>
+      <td>{{ datum["Sleep Duration"] }}</td>
+      <td>{{ datum["Quality of Sleep"] }}</td>
+      <td>{{ datum["Blood Pressure"] }}</td>
+      <td>{{ datum["Heart Rate"] }}</td>
     </tr>
   </tbody>
 </table>

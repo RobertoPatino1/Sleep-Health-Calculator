@@ -4,7 +4,6 @@ import {Chart} from 'chart.js';
 import { Plantillas } from '../app/interfaces/plantillas';
 import { ServiciosService } from '../app/providers/servicios.service';
 
-// Chart.register(...registerables);
 
 
 
