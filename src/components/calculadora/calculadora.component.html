@@ -1,49 +1,63 @@
 <section id="sleep-calculator">
+  <div class="card shadow mb-4">
+    <!-- Card Body -->
+    <div class="card-body">
+      <!-- Formulario  -->
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-6 col-12 mt-5">
+          <form
+            id="formulario"
+            (ngSubmit)="saveData(formTemplate)"
+            #formTemplate="ngForm"
+          >
+            <div class="row mb-4 d-flex justify-content-center">
+              <!-- Genero -->
+              <div class="col-md-6">
+                <div class="form-outline mb-4">
+                  <input
+                    type="string"
+                    id="genero"
+                    step="0.25"
+                    class="form-control"
+                    name="genero"
+                    [(ngModel)]="usuario.genero"
+                  />
+                  <label class="form-label" for="genero">Gender (M/F)</label>
+                </div>
+              </div>
 
-    <div class="card shadow mb-4">
-      <!-- Card Header - Dropdown -->
-      <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-        <h6 class="m-0 font-weight-bold text-primary">sleep-calculator</h6>
-      </div>
-      <!-- Card Body -->
-      <div class="card-body">
-        <!-- Formulario  -->
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-6 col-12 mt-5">
-              <form id="formulario" (ngSubmit)="saveData(formTemplate)" #formTemplate="ngForm">
+              <!-- Edad -->
+              <div class="col-md-6">
+                <div class="form-outline mb-4">
+                  <input
+                    type="number"
+                    id="edad"
+                    step="0.25"
+                    class="form-control"
+                    name="edad"
+                    [(ngModel)]="usuario.edad"
+                  />
+                  <label class="form-label" for="edad">Age</label>
+                </div>
+              </div>
 
-                  <div class="row mb-4 d-flex justify-content-center">
-                      
-                      <!-- Genero -->
-                      <div class="col-md-6">
-                        <div class="form-outline mb-4">
-                            <input type="string" id="genero"
-                                step="0.25" class="form-control" name="genero" [(ngModel)]="usuario.genero" />
-                            <label class="form-label" for="genero">Gender (M/F)</label>
-                        </div>
-                      </div>
+              <!-- Horas de sueno -->
+              <div class="col-md-6">
+                <div class="form-outline mb-4">
+                  <input
+                    type="number"
+                    id="horasDeSueno"
+                    required
+                    class="form-control"
+                    name="horas"
+                    [(ngModel)]="usuario.horas"
+                  />
+                  <label class="form-label" for="horas">Sleep Hours</label>
+                </div>
+              </div>
+            </div>
 
-                      <!-- Edad -->
-                      <div class="col-md-6">
-                        <div class="form-outline mb-4">
-                            <input type="number" id="edad"
-                                step="0.25" class="form-control" name="edad" [(ngModel)]="usuario.edad" />
-                            <label class="form-label" for="edad">Age</label>
-                        </div>
-                      </div>
-
-                       <!-- Horas de sueno -->
-                       <div class="col-md-6">
-                        <div class="form-outline mb-4">
-                            <input type="number" id="horasDeSueno"
-                                required class="form-control" name="horas" [(ngModel)]="usuario.horas"/>
-                            <label class="form-label" for="horas">Sleep Hours</label>
-                        </div>
-                      </div>
-
-                  </div>
-
-                  <!--<div class="row mb-4 d-flex justify-content-center">
+            <!--<div class="row mb-4 d-flex justify-content-center">
 
                        Horas de sueno 
                       <div class="col-md-6">
@@ -54,30 +68,30 @@
                         </div>
                       </div>
                   </div>-->
-                  <!-- Submit button -->
-                  <div class="row mb-4 d-flex justify-content-center">
-                    <div class="col-md-6">
-                        <button type="submit"
-                            class="btn btn-primary btn-block">Calculate Sleep Cycles</button>
-                    </div>
-                </div>
+            <!-- Submit button -->
+            <div class="row mb-4 d-flex justify-content-center">
+              <div class="col-md-6">
+                <button type="submit" class="btn btn-primary btn-block">
+                  Calculate Sleep Cycles
+                </button>
+              </div>
+            </div>
 
-                <div class="row mb-4 d-flex justify-content-center">
-                    <div class="col-md-6">
-                        <input
-                            class="form-control"
-                            id="ciclos"
-                            type="text"
-                            placeholder="Total Cycles"
-                            aria-label="disabled input example"
-                            disabled />
-                    </div>
-                </div>
-
-              </form>
-          </div>
-      </div>
+            <div class="row mb-4 d-flex justify-content-center">
+              <div class="col-md-6">
+                <input
+                  class="form-control"
+                  id="ciclos"
+                  type="text"
+                  placeholder="Total Cycles"
+                  aria-label="disabled input example"
+                  disabled
+                />
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>

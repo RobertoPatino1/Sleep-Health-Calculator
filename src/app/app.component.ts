@@ -28,8 +28,8 @@ export class AppComponent implements OnInit {
     this.getDataFromService()
     this.getALLDataFromService()
     this.plotBarsChart()
-this.plotLinesChart() 
-this.plotScatterChart()
+    this.plotLinesChart() 
+    this.plotScatterChart()
 
 
   }
@@ -60,40 +60,6 @@ this.plotScatterChart()
     }
   }
 
-  // plotLineChart(): void {
-  //   var myChart = new Chart("main-chart-area", {
-  //     type: 'bar',
-  //     data: {
-  //         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-  //         datasets: [{
-  //             label: '# of Votes',
-  //             data: [12, 19, 3, 5, 2, 3],
-  //             backgroundColor: [
-  //                 'rgba(255, 99, 132, 0.2)',
-  //                 'rgba(54, 162, 235, 0.2)',
-  //                 'rgba(255, 206, 86, 0.2)',
-  //                 'rgba(75, 192, 192, 0.2)',
-  //                 'rgba(153, 102, 255, 0.2)',
-  //                 'rgba(255, 159, 64, 0.2)'
-  //             ],
-  //             borderColor: [
-  //                 'rgba(255, 99, 132, 1)',
-  //                 'rgba(54, 162, 235, 1)',
-  //                 'rgba(255, 206, 86, 1)',
-  //                 'rgba(75, 192, 192, 1)',
-  //                 'rgba(153, 102, 255, 1)',
-  //                 'rgba(255, 159, 64, 1)'
-  //             ],
-  //             borderWidth: 1
-  //         }]
-  //     },
-  //     options: {
-  //         scales: {
-
-  //         }
-  //     }
-  // });
-  // }
 
 
   getDataFromService(): void {
@@ -107,31 +73,30 @@ this.plotScatterChart()
         this.plotLinesChart();
       },
       (error) => {
-        console.error('Error al obtener los datos del servicio:', error);
+        console.error('Error while getting the data from the service:', error);
       }
     );
   }
   getALLDataFromService(): void {
-    // Obtener los datos del servicio
     this.serviciosService.getResponse().subscribe(
       (data: Object) => {
         this.chartData = (data as Plantillas[]); // Cast the data to the Plantillas[] type
         this.plotScatterChart();
       },
       (error) => {
-        console.error('Error al obtener los datos del servicio:', error);
+        console.error('Error while getting the data from the service:', error);
       }
     );
   }
   plotBarsChart(): void {
     // Verificar que haya datos para el gráfico
     if (this.chartData.length === 0) {
-      console.warn('No hay datos para el gráfico.');
+      console.warn('No data for the graph.');
       return;
     }
 
     // Procesar los datos para el gráfico
-    const labels = this.chartData.map((item) => "ID:"+item['Person ID']+"- Edad"+item.Age);
+    const labels = this.chartData.map((item) => "ID:"+item['Person ID']);
     const data = this.chartData.map((item) => parseInt(item["Stress Level"])); // Cambiar "Daily Steps" por la propiedad que quieras representar en el gráfico
 
     // Crear el gráfico con los datos procesados
@@ -154,21 +119,21 @@ this.plotScatterChart()
 plotLinesChart(): void {
   // Verificar que haya datos para el gráfico
   if (this.chartData.length === 0) {
-    console.warn('No hay datos para el gráfico.');
+    console.warn('No data for the graph.');
     return;
   }
 
-  // Procesar los datos para el gráfico
+  // Process data 
   const labels = this.chartData.map((item) => "ID: "+item['Person ID']);
   const data = this.chartData.map((item) => parseInt(item['Quality of Sleep'])); // Cambiar "Daily Steps" por la propiedad que quieras representar en el gráfico
 
-  // Crear el gráfico con los datos procesados
+  // Creating the graph
   var myChart = new Chart("main-chart-line", {
     type: 'line',
     data: {
       labels: labels,
       datasets: [{
-        label:'Quality of Sleep', // Cambiar la etiqueta según la propiedad que estés representando
+        label:'Quality of Sleep', 
         data: data,
         backgroundColor: 'rgba(241,250,254)',
         borderColor: 'rgba(196,192,203)',
@@ -208,16 +173,16 @@ plotScatterChart(): void {
         {
           label: 'Male',
           data: maleData,
-          backgroundColor: 'rgba(54, 162, 235, 0.7)',
-          borderColor: 'rgba(54, 162, 235, 1)',
+          backgroundColor: 'rgba(173, 216, 230, 1)',
+          
           pointRadius: 8,
           pointHoverRadius: 10,
         },
         {
           label: 'Female',
           data: femaleData,
-          backgroundColor: 'rgba(255, 99, 132, 0.7)',
-          borderColor: 'rgba(255, 99, 132, 1)',
+          backgroundColor: 'rgba(255, 182, 193, 1)',
+          
           pointRadius: 8,
           pointHoverRadius: 10,
         },
@@ -230,7 +195,7 @@ plotScatterChart(): void {
           position: 'bottom',
           scaleLabel: {
             display: true,
-            labelString: 'Sleep Duration',
+            labelString: 'Sleep Duration (hours)',
           },
         }],
         yAxes: [{
