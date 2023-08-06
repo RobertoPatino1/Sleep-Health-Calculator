@@ -31,6 +31,32 @@ describe('AppComponent', () => {
   });
 
 
+  it('should have the topbar component',()=>{
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('app-top-bar')).not.toBe(null);
+  })
+  it('should have the dashboard component',()=>{
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('app-dashboard')).not.toBe(null);
+  })
+  it('should have the calculator component',()=>{
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('app-calculadora')).not.toBe(null);
+  })
+  it('should have the global data component',()=>{
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('app-global-data')).not.toBe(null);
+  })
+  
+
 
 
 });

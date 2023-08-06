@@ -18,4 +18,15 @@ describe('TopBarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('nav element', ()=> {
+    const headerElement: HTMLElement = fixture.nativeElement;
+    const nav = headerElement.querySelector('nav')!;
+    expect(nav).toBeTruthy();
+  })
+  it('No p element', ()=> {
+    const headerElement: HTMLElement = fixture.nativeElement;
+    const p = headerElement.querySelector('p')!;
+    expect(p).toBeFalsy();
+  })
 });

@@ -25,7 +25,7 @@ describe('DashboardComponent', () => {
       providers: [ ServiciosService ],
 
       declarations: [DashboardComponent,SaluteMessageComponent,CardComponent,ContainerComponent,GraphsComponent]
-    });
+    }).compileComponents();
     fixture = TestBed.createComponent(DashboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -34,5 +34,39 @@ describe('DashboardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should have salute message component',()=>{
+    const fixture = TestBed.createComponent(DashboardComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('app-salute-message')).not.toBe(null);
+  })
+  it('should have card component',()=>{
+    const fixture = TestBed.createComponent(DashboardComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('app-card')).not.toBe(null);
+  })
+  it('should have container component',()=>{
+    const fixture = TestBed.createComponent(DashboardComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('app-container')).not.toBe(null);
+  })
+  it('should have graphs component',()=>{
+    const fixture = TestBed.createComponent(DashboardComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('app-graphs')).not.toBe(null);
+  })
+  it('div',()=>{
+    const divElement: HTMLElement = fixture.nativeElement;
+    const div = divElement.querySelector('div')!;
+    expect(div).toBeTruthy();
+  })
+  it('No p element', ()=> {
+    const headerElement: HTMLElement = fixture.nativeElement;
+    const nav = headerElement.querySelector('p')!;
+    expect(nav).toBeFalsy();
+  })
   
 });

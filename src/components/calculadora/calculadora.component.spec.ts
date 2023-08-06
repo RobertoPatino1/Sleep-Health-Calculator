@@ -4,11 +4,7 @@ import { CalculadoraComponent } from './calculadora.component';
 
 import { FormsModule } from '@angular/forms';
 
-//Importe el módulo cliente para requerimientos http
-import { HttpClientModule } from '@angular/common/http';
 
-//Importe el servicio
-import { ServiciosService } from 'src/app/providers/servicios.service';
 
 describe('CalculadoraComponent', () => {
   let component: CalculadoraComponent;
@@ -17,10 +13,10 @@ describe('CalculadoraComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       //Registre el módulo de petición http
-      imports: [ HttpClientModule,FormsModule ],
+      imports: [FormsModule ],
 
       //Registre el servicio como proveedor de datos
-      providers: [ ServiciosService ],
+      providers: [ ],
 
       declarations: [CalculadoraComponent]
     });
@@ -33,5 +29,15 @@ describe('CalculadoraComponent', () => {
     expect(component).toBeTruthy();
     
   });
+  it('form element', ()=> {
+    const formElement: HTMLElement = fixture.nativeElement;
+    const form = formElement.querySelector('form')!;
+    expect(form).toBeTruthy();
+  })
+  it('No p element', ()=> {
+    const headerElement: HTMLElement = fixture.nativeElement;
+    const nav = headerElement.querySelector('p')!;
+    expect(nav).toBeFalsy();
+  })
 
 });
