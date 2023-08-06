@@ -11,12 +11,13 @@ import { GraphsComponent } from 'src/components/graphs/graphs.component';
 import { NavigationComponent } from 'src/components/navigation/navigation.component';
 import { SaluteMessageComponent } from 'src/components/salute-message/salute-message.component';
 import { TopBarComponent } from 'src/components/top-bar/top-bar.component';
+import { FormsModule } from '@angular/forms';
 
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports:[HttpClientModule],
+      imports:[HttpClientModule, FormsModule],
       declarations: [AppComponent,CalculadoraComponent,CardComponent,ContainerComponent,
         DashboardComponent,DataComponent,GlobalDataComponent,GraphsComponent,NavigationComponent,
         SaluteMessageComponent,TopBarComponent

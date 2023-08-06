@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CalculadoraComponent } from './calculadora.component';
 
+import { FormsModule } from '@angular/forms';
+
 //Importe el módulo cliente para requerimientos http
 import { HttpClientModule } from '@angular/common/http';
 
@@ -15,7 +17,7 @@ describe('CalculadoraComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       //Registre el módulo de petición http
-      imports: [ HttpClientModule ],
+      imports: [ HttpClientModule,FormsModule ],
 
       //Registre el servicio como proveedor de datos
       providers: [ ServiciosService ],

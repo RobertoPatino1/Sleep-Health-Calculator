@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { GlobalDataComponent } from './global-data.component';
 import { ContainerComponent } from '../container/container.component';
 import { DataComponent } from '../data/data.component';
+
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
