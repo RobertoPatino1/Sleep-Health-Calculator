@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import {funcionPredeterminada} from '../calculadora/calculadora.js'
 @Component({
   selector: 'app-calculadora',

@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
 import { NavigationComponent } from '../components/navigation/navigation.component';
-import { DataComponent } from './data/data.component';
+import { DataComponent } from '../components/data/data.component';
 import { SaluteMessageComponent } from '../components/salute-message/salute-message.component';
 import { CardComponent } from '../components/card/card.component';
 import { ContainerComponent } from '../components/container/container.component';
@@ -20,7 +20,6 @@ import { CalculadoraComponent } from '../components/calculadora/calculadora.comp
  
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { GlobalDataComponent } from '../components/global-data/global-data.component';
-
 
 @NgModule({
   declarations: [
@@ -40,6 +39,7 @@ import { GlobalDataComponent } from '../components/global-data/global-data.compo
   imports: [
     BrowserModule,HttpClientModule, CanvasJSAngularChartsModule, FormsModule
   ],
+  exports:[ContainerComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Plantillas } from '../interfaces/plantillas';
-import { ServiciosService } from '../providers/servicios.service';
+import { Plantillas } from '../../app/interfaces/plantillas';
+import { ServiciosService } from '../../app/providers/servicios.service';
 @Component({
   selector: 'app-data',
   templateUrl: './data.component.html',

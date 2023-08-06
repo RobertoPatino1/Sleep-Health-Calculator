@@ -24,7 +24,7 @@ describe('ServiciosService', () => {
   });
 
    // La función done se encarga de esperar por completar el requerimiento
-   it('<NOMBRE_METODO> should return value from observable', (done: DoneFn) => {
+   it('getResponse should return value from observable', (done: DoneFn) => {
     //Invoque el método con la petición asincrónica
     service.getResponse().subscribe(data => {
       
