@@ -10,7 +10,7 @@ exports.funcionPredeterminada = function () {
 
     if (resultado == 5) {
       document.getElementById("ciclos").value =
-        resultado + " cycles. Excellent, you are doing grate!";
+        resultado + " cycles. Excellent, you're doing great!";
     } else if (resultado == 4) {
       document.getElementById("ciclos").value =
         resultado + " cycles. You should sleep a little more";
@@ -19,10 +19,10 @@ exports.funcionPredeterminada = function () {
         resultado + " cycles. You should sleep more";
     } else if (resultado == 6) {
       document.getElementById("ciclos").value =
-        resultado + " cycles. You are oversleeping a little";
+        resultado + " cycles. You're oversleeping a little";
     } else if (resultado > 6) {
       document.getElementById("ciclos").value =
-        resultado + " cycles. You are sleeping too much";
+        resultado + " cycles. You're sleeping too much";
     }
   });
 };
